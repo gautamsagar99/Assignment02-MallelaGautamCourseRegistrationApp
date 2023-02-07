@@ -86,7 +86,7 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WSI-AC-hrj">
+                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WSI-AC-hrj" userLabel="bigDataSWCH">
                                                 <rect key="frame" x="218" y="0.0" width="212" height="64.666666666666671"/>
                                                 <connections>
                                                     <action selector="toggleBigData:" destination="BYZ-38-t0r" eventType="valueChanged" id="5gq-Cp-IkP"/>
@@ -156,7 +156,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="courseSWCH" destination="WSI-AC-hrj" id="zs8-hM-5yr"/>
+                        <outlet property="bigDataSWCH" destination="WSI-AC-hrj" id="cl0-d5-TQg"/>
                         <outlet property="firstNameTF" destination="aDa-an-vhC" id="eDK-sl-aQt"/>
                         <outlet property="iOSSWCH" destination="gTo-Ej-Ulg" id="h7f-EN-WcL"/>
                         <outlet property="lastNameTF" destination="NIn-wY-trZ" id="y21-MN-MNN"/>
