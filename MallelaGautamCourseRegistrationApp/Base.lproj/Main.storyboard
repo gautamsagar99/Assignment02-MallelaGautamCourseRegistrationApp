@@ -86,7 +86,7 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WSI-AC-hrj" userLabel="bigDataSWCH">
+                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WSI-AC-hrj">
                                                 <rect key="frame" x="218" y="0.0" width="212" height="64.666666666666671"/>
                                                 <connections>
                                                     <action selector="toggleCourse:" destination="BYZ-38-t0r" eventType="valueChanged" id="INe-B1-opB"/>
