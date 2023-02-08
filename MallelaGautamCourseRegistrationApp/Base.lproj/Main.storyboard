@@ -55,7 +55,7 @@
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gTo-Ej-Ulg">
                                                 <rect key="frame" x="218" y="0.0" width="212" height="64.666666666666671"/>
                                                 <connections>
-                                                    <action selector="toggleiOS:" destination="BYZ-38-t0r" eventType="valueChanged" id="Tyx-ta-oJY"/>
+                                                    <action selector="toggleiOS:" destination="BYZ-38-t0r" eventType="valueChanged" id="XDf-Ts-a71"/>
                                                 </connections>
                                             </switch>
                                         </subviews>
@@ -72,7 +72,7 @@
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RPC-qZ-wgm">
                                                 <rect key="frame" x="218" y="0.0" width="212" height="64.666666666666671"/>
                                                 <connections>
-                                                    <action selector="togglePatterns:" destination="BYZ-38-t0r" eventType="valueChanged" id="dET-Qf-RyW"/>
+                                                    <action selector="togglePatterns:" destination="BYZ-38-t0r" eventType="valueChanged" id="WDu-zy-c6E"/>
                                                 </connections>
                                             </switch>
                                         </subviews>
@@ -156,12 +156,12 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="bigDataSWCH" destination="WSI-AC-hrj" id="cl0-d5-TQg"/>
                         <outlet property="firstNameTF" destination="aDa-an-vhC" id="eDK-sl-aQt"/>
-                        <outlet property="iOSSWCH" destination="gTo-Ej-Ulg" id="h7f-EN-WcL"/>
                         <outlet property="lastNameTF" destination="NIn-wY-trZ" id="y21-MN-MNN"/>
                         <outlet property="messageLBL" destination="rec-dH-1Td" id="cdw-bo-7qr"/>
-                        <outlet property="patternsSWCH" destination="RPC-qZ-wgm" id="5nc-KW-1ad"/>
+                        <outletCollection property="courseSWCH" destination="gTo-Ej-Ulg" collectionClass="NSMutableArray" id="u9u-io-QZ5"/>
+                        <outletCollection property="courseSWCH" destination="RPC-qZ-wgm" collectionClass="NSMutableArray" id="ubm-Or-pzP"/>
+                        <outletCollection property="courseSWCH" destination="WSI-AC-hrj" collectionClass="NSMutableArray" id="Su7-s3-v6L"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
