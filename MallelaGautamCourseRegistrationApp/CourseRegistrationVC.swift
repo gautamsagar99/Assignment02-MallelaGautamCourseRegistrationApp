@@ -13,6 +13,10 @@ class CourseRegistrationVC: UIViewController {
         super.viewDidLoad()
         
         self.messageLBL.text = ""
+        for i in courseSWCH
+        {
+            i.isOn = false
+        }
     }
     //text label to show to user
     @IBOutlet weak var messageLBL: UILabel!
@@ -23,50 +27,33 @@ class CourseRegistrationVC: UIViewController {
     
     var count = 0
     var courses = ""
-    //3 switches to select the courses
-//    @IBOutlet weak var iOSSWCH: UISwitch!
-//    @IBOutlet weak var bigDataSWCH: UISwitch!
-//    @IBOutlet weak var patternsSWCH: UISwitch!
     
     @IBOutlet var courseSWCH: [UISwitch]!
     
-    @IBAction func toggleiOS(_ sender: UISwitch) {
-        if(sender.isOn == true){
-            self.count += 1;
-            self.courses += ""
-            self.courses += "iOS."
-        }
-    }
     
-    @IBAction func togglePatterns(_ sender: UISwitch){
-        if(sender.isOn == true){
-            self.count += 1;
-            if self.count == 2{
-                self.courses += ", patterns"
-            }else{
-                self.courses += "Patterns."
+    @IBAction func toggleCourse(_ sender: UISwitch) {
+        count = 0
+        courses = ""
+            if courseSWCH[0].isOn == true{
+                courses += " iOS,"
+                count += 1
             }
-                
-        }
-        
-    }
-    
-    @IBAction func toggleBigData(_ sender: UISwitch) {
-        if(sender.isOn == true){
-            self.count += 1;
-            if self.count == 2{
-                self.courses += ", BigData"
-            }else{
-                self.courses += "BigData."
+            if courseSWCH[1].isOn == true{
+                courses += " Patterns,"
+                count += 1
             }
-                
-        }
+            if courseSWCH[2].isOn == true {
+                courses += " BigData,"
+                count += 1
+            }
+  
     }
-    
     
     
     @IBAction func onSubmit(_ sender: UIButton) {
 //        self.messageLBL.text = ""
+        
+        
         
         var firstName = self.firstNameTF.text!
         var lastName = self.lastNameTF.text!
@@ -74,7 +61,8 @@ class CourseRegistrationVC: UIViewController {
             self.messageLBL.text = "Please enter your full name."
         }
         else if ( self.firstNameTF.text != "" && self.lastNameTF.text != "" && count > 0){
-            
+            courses.remove(at: courses.index(before: courses.endIndex))
+            courses += "."
             self.messageLBL.text = "CONFIRMATION\n \(firstName), \(lastName) has successfully enrolled in \(count) course(s), namely, \(courses)"
             
         }
